@@ -6,7 +6,6 @@ import Home from "../components/home";
 
 class HomeContainer extends React.Component {
 
-
     constructor(props) {
         super(props)
         this.state = {
@@ -19,8 +18,6 @@ class HomeContainer extends React.Component {
     }
 
     componentWillMount() {
-
-        //  this.getData();
         this.props.fetchData();
     }
 
@@ -53,7 +50,11 @@ class HomeContainer extends React.Component {
 }
 
 HomeContainer.propTypes = {
-
+    state: PropTypes.object,
+    searchText: PropTypes.string,
+    onValueChange: PropTypes.func,
+    onTileClicked: PropTypes.func,
+    onCrossClicked: PropTypes.func
 }
 
 const mapStateToProps = (store) => {

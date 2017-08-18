@@ -11,7 +11,7 @@ export default class SearchResultsPage extends React.Component {
         let displayData = (this.props.data.length > 0) ? this.props.data.filter((item) => item.title.toUpperCase().indexOf(this.props.query.toUpperCase()) !== -1) : null;
         return (
             (displayData !== null) && (<div className="searchResultDiv">
-                {displayData.map((item) => <Tile key1={item.id} url={item.url} title={item.title} />)}
+                {displayData.map((item) => <Tile key={item.id} id={item.id} url={item.url} title={item.title} />)}
             </div>)
         );
     }
