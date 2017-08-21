@@ -4,7 +4,8 @@ import * as actions from '../common/actionTypes'
 var initialState = {
 
     data: [],
-    detailData: {}
+    detailData: {},
+    isLoading:false
 }
 
 function saveData(state, action) {

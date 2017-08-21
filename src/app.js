@@ -6,13 +6,18 @@ import SearchResultContainer from './containers/SearchResultContainer';
 import DetailsPageContainer from "./containers/DetailsPageContainer"
 import DetailsPage from './components/DetailsPage';
 import './css/styles.css';
+import LoaderContainer from './containers/LoaderContainer';
 
 class AppComponent extends React.Component {
 
     render() {
 
-        return (
+        return (          
             <BrowserRouter >
+            <div>
+                <div>
+                   <LoaderContainer/>
+                </div>
                 <div>
                     <Switch>
                         <Route path="/home" component={HomeContainer} />
@@ -21,7 +26,8 @@ class AppComponent extends React.Component {
                         <Redirect from="/" to="/home" />
                     </Switch>
                 </div>
-            </BrowserRouter>
+            </div>
+            </BrowserRouter>            
         );
     }
 }

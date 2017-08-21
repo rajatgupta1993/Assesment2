@@ -154,3 +154,10 @@ span{
         resize: vertical;
 }
 
+.loader {
+      display:  block
+}
+.loader-disabled {
+        display: none;
+}
+
