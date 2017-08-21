@@ -88,6 +88,7 @@ span{
     background-image: none;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin-left: 60px;
       }
 
 .searchBoxDiv{
@@ -147,5 +148,9 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.textArea{
+        resize: vertical;
 }
 

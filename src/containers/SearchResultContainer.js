@@ -1,41 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchData } from '../actions/action';
-import '../css/styles.css';
 import { Link, } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import SearchResultsPage from "../components/SearchResultsPage";
-
-class SearchResultContainer extends React.Component {
-
-    constructor(props) {
-        super(props);
-
-    }
-
-    componentWillMount() {
-
-        //  this.getData();
-        this.props.fetchData();
-    }
-
-
-    render() {
-       
-        console.log(this.props.match.params.query);
-        return (
-            <SearchResultsPage data={this.props.state} query={this.props.match.params.query} />
-        );
-    }
-}
-
-SearchResultContainer.propTypes = {
-
-}
+import SearchResultSelector from '../selectors/SearchResultSelector'
 
 const mapStateToProps = (store) => {
     return {
-        state: store.homeReducer.data
+        getSearchQuery:(searchQuery) => SearchResultSelector(searchQuery,store)
     }
 }
 
@@ -45,4 +17,6 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchResultContainer);
+const SearchResultContainer = connect(mapStateToProps,mapDispatchToProps)(SearchResultsPage)
+
+export default SearchResultContainer;

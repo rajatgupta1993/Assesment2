@@ -1,11 +1,13 @@
+import * as actions from '../common/actionTypes'
+
 export function fetchData() {
     return {
-        type: "FETCH_DATA"
+        type: actions.FETCH_DATA
     }
 }
 export function saveData(data) {
     return {
-        type: "SAVE_DATA",
+        type: actions.SAVE_DATA,
         data: data
     }
 }
@@ -13,14 +15,14 @@ export function saveData(data) {
 export function getDetails(id) {
 
     return {
-        type: "GET_DETAILS",
+        type: actions.GET_DETAILS,
         data: id
     }
 }
 
 export function saveDetail(data) {
     return {
-        type: "SAVE_DETAIL",
+        type: actions.SAVE_DETAIL,
         data: data
     }
 }
@@ -28,7 +30,7 @@ export function saveDetail(data) {
 export function postDataToServerAction(data) {
 
     return {
-        type: "POST_DATA",
+        type: actions.POST_DATA,
         data: data
     }
 }

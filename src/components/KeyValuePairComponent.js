@@ -7,11 +7,9 @@ const KeyValuePairComponent = (props) => {
         <div className="marginBottom">
             <div className="keyValueContainer">
                 <div className="key"> {props.key1}</div>
-
-                {(props.editable) ? (<input type="text" className="value" onChange={props.onChange}
+                {(props.editable) ? (<textarea type="text" className="value textArea" onChange={props.onChange}
                     value={props.value} />) :
                     (<div className="value"> {props.value}</div>)}
-                    
             </div>
         </div>
     );
