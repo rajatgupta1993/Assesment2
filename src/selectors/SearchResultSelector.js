@@ -4,9 +4,6 @@ const getSearchQuery = (query) => {
 const getAllData = (query,store) =>{
     return store.homeReducer.data};
 
-const a=5;
-
-
  const SearchResultSelector = createSelector(
   [ getSearchQuery,getAllData ],
   ( query, allData) => {

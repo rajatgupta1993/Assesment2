@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 const LoaderComponent = (props) => {
     return (
 
@@ -9,4 +9,8 @@ const LoaderComponent = (props) => {
     );
 };
 
+LoaderComponent.PropTypes={
+    isLoading: PropTypes.bool
+
+}
 export default LoaderComponent;

@@ -1,6 +1,7 @@
 import React from 'react';
 import reactLogo from '../resources/reactLogo.png';
 import { Link, } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const SearchBox= (props) => {
     return (
@@ -26,6 +27,12 @@ const SearchBox= (props) => {
                         </div>
                     </div>
     );
+};
+
+SearchBox.propTypes = {
+    searchText: PropTypes.string,
+    onValueChange: PropTypes.func,
+    onCrossClicked: PropTypes.func
 };
 
 export default SearchBox;

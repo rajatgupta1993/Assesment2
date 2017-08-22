@@ -3,6 +3,7 @@ import Tile from './tiles';
 import '../css/styles.css';
 import { Link, } from 'react-router-dom';
 import SearchBox from './SearchBox'
+import PropTypes from 'prop-types'
 
 export default class home extends React.Component {
     constructor(props) {
@@ -54,4 +55,9 @@ export default class home extends React.Component {
                 </div>)
         );
     }
+}
+
+home.PropTypes={
+    state: PropTypes.array,
+    fetchData:PropTypes.func
 }

@@ -11,6 +11,7 @@ var initialState = {
 function saveData(state, action) {
     return { ...state, data: action.data };
 }
+
 function saveDetail(state, action) {
     let state1 = { ...state, detailData: action.data }
     return state1;

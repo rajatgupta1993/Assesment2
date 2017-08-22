@@ -5,6 +5,7 @@ import { Link, } from 'react-router-dom';
 import KeyValuePairComponent from './KeyValuePairComponent';
 import Modal from './Modal';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 
 export default class DetailsPage extends React.Component {
     constructor(props) {
@@ -130,7 +131,5 @@ export default class DetailsPage extends React.Component {
 
 
 DetailsPage.propTypes = {
-    match: PropTypes.object,
-    params: PropTypes.object,
-    id: PropTypes.number
+    postDataToServerAction: PropTypes.func
 };

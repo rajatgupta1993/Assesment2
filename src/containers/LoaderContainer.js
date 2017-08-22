@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import LoaderComponent from "../components/LoaderComponent";
 
 const mapStateToProps = (store) => {
-    console.log('=============', store.homeReducer);
     return {
         isLoading: store.homeReducer.isLoading
     }
