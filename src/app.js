@@ -15,7 +15,7 @@ class AppComponent extends React.Component {
         return (          
             <BrowserRouter >
             <div>
-                <div>
+                <div >
                    <LoaderContainer/>
                 </div>
                 <div>

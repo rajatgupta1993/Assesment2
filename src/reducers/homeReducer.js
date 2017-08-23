@@ -5,7 +5,7 @@ var initialState = {
 
     data: [],
     detailData: {},
-    isLoading:false
+    isLoading: false
 }
 
 function saveData(state, action) {
@@ -17,6 +17,13 @@ function saveDetail(state, action) {
     return state1;
 }
 
+function startLoading(state, action) {
+    return { ...state, isLoading: true };
+}
+
+function stopLoading(state, action) {
+    return { ...state, isLoading: false };
+}
 export default function homeReducer(state = initialState, action) {
 
     switch (action.type) {
@@ -26,6 +33,13 @@ export default function homeReducer(state = initialState, action) {
 
         case actions.SAVE_DETAIL:
             return saveDetail(state, action);
+
+        case actions.START_LOADING:
+            return startLoading(state, action);
+
+        case actions.STOP_LOADING:
+            return stopLoading(state, action);
+
 
         default:
             return state;

@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { fetchData } from '../actions/action';
-import PropTypes from 'prop-types';
 import Home from "../components/home";
 
 const mapStateToProps = (store) => {

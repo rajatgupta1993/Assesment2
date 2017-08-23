@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const LoaderComponent = (props) => {
+const LoaderComponent = ({isLoading}=props) => {
     return (
 
-        <div className={props.isLoading ? `loader` : `loader-disabled`}>
-            <img src="http://localhost:3000/loader.gif" />
+        <div className={isLoading ? `loader` : `loader-disabled`}>
+            <img src="http://localhost:3000/loader-1.gif" />
         </div>
     );
 };

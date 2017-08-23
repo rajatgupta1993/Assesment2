@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchData } from '../actions/action';
-import { Link, } from 'react-router-dom';
 import SearchResultsPage from "../components/SearchResultsPage";
 import SearchResultSelector from '../selectors/SearchResultSelector'
 

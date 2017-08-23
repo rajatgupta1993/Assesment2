@@ -1,6 +1,5 @@
 import React from 'react';
 import Tile from './tiles';
-import '../css/styles.css';
 import { Link, } from 'react-router-dom';
 import KeyValuePairComponent from './KeyValuePairComponent';
 import Modal from './Modal';
