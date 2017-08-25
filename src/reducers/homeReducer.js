@@ -1,19 +1,19 @@
-'use-strict'
-import * as actions from '../common/actionTypes'
+'use-strict';
+import * as actions from '../common/actionTypes';
 
 var initialState = {
 
     data: [],
     detailData: {},
-    isLoading: false
-}
+    isLoading: false,
+};
 
 function saveData(state, action) {
     return { ...state, data: action.data };
 }
 
 function saveDetail(state, action) {
-    let state1 = { ...state, detailData: action.data }
+    let state1 = { ...state, detailData: action.data };
     return state1;
 }
 

@@ -13,7 +13,7 @@ import createSagaMiddleware from "redux-saga";
 const sagaMiddleware = createSagaMiddleware();
 
 const reducers = combineReducers({
-    homeReducer: homeReducer
+    homeReducer: homeReducer,
 });
 const store = createStore(reducers,
     applyMiddleware(sagaMiddleware));

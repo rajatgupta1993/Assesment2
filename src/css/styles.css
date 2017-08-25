@@ -1,7 +1,16 @@
 .imageDiv{
         text-align: center;
         margin-bottom: 30px;
-        box-shadow: 2px 2px 5px #666;     
+         box-shadow: 2px 2px 7px rgba(224,24,24,.2);     
+         transition: all 3s easy   
+}
+
+.imageDiv:hover{
+
+        text-align: center;
+        margin-bottom: 30px;
+        box-shadow: 2px 2px 7px rgba(224,24,24,.8);  
+        transition: all .3s easy   
 }
 
 .imageDiv img {
@@ -172,4 +181,22 @@ span{
     position: fixed;
   
     
+}
+.no-data{
+    align-items: center;
+    text-align: center;
+    top: 40%;
+    position: fixed;
+    left: 50%;
+    margin-left: -50%;
+    width: 100%;
+}
+
+.no-data-text{
+    margin-top: 40px;
+    font-size: 28px;
+    text-shadow: 2px 1px white;
+}
+.padding{
+        padding: 1% 10%;
 }

@@ -1,11 +1,10 @@
 import React from 'react';
-import reactLogo from '../resources/reactLogo.png';
 import KeyValuePairComponent from './KeyValuePairComponent';
 import PropTypes from 'prop-types';
 
 
-const Modal = ({closeModal,state,data,id,title,description,director,age,onTitleChange,
-                onNameChange,onCompanyChange,onAgeChange,onSaveClicked}=props) => {
+const Modal = ({closeModal, state, data, id, title, description, director, age, onTitleChange,
+                onNameChange, onCompanyChange, onAgeChange, onSaveClicked}) => {
         return (
             <div className="backdropStyle">
                 <span className="glyphicon glyphicon-remove floatRight" onClick={closeModal} />

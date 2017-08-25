@@ -1,12 +1,12 @@
 import React from 'react';
 import Tile from './tiles';
-import { Link, } from 'react-router-dom';
-import SearchBox from './SearchBox'
-import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
+import SearchBox from './SearchBox';
+import PropTypes from 'prop-types';
 
 export default class home extends React.Component {
     constructor() {
-        super()
+        super();
         this.state = {
             searchText: '',
         };
@@ -23,19 +23,19 @@ export default class home extends React.Component {
     onValueChange(e) {
         this.setState({
             searchText: e.target.value,
-            tileId: '2'
+            tileId: '2',
         });
     }
 
     onTileClicked(e) {
         this.setState({
-            tileId: e.target.getAttribute("id")
+            tileId: e.target.getAttribute("id"),
         });
     }
 
     onCrossClicked() {
         this.setState({
-            searchText: ''
+            searchText: '',
         });
     }
     render() {
@@ -59,5 +59,5 @@ export default class home extends React.Component {
 
 home.PropTypes={
     state: PropTypes.array,
-    fetchData:PropTypes.func
-}
+    fetchData:PropTypes.func,
+};

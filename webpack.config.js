@@ -4,7 +4,7 @@ const { resolve } = require("path");
 module.exports = {
     context: resolve('src'),
     entry: {
-        app: './index.js'
+        app: ['babel-polyfill', './index.js']
     },
 
     output: {
@@ -28,8 +28,11 @@ module.exports = {
         rules: [
             {
                 test: [/\.js$/, /\.jsx$/],
-                loaders: ['babel-loader'],
-                exclude: /node_modules/
+                loaders: 'babel-loader',
+                exclude: /node_modules/,
+                options: {
+                    presets: ['es2015', 'react']
+                }
             },
             {
                 test: /\.css$/,
@@ -41,13 +44,14 @@ module.exports = {
                 loader: "file-loader"
             },
 
-            // {
-            //     enforce: 'pre',
-            //     test: [/\.js$/, /\.jsx$/],
-            //     exclude: /node_modules/,
-            //     loader: "eslint-loader",
+            {
+                enforce: 'pre',
+                test: [/\.js$/, /\.jsx$/],
+                exclude: /node_modules/,
+                loader: "eslint-loader",
+                exclude : /(node_modules)/
 
-            //  },
+             },
         ]
     }
 }

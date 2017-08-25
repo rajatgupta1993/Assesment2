@@ -3,7 +3,7 @@ import Header from './components/Header';
 import HomeContainer from './containers/HomeContainer';
 import { Route, BrowserRouter, Link, Switch, Redirect } from 'react-router-dom';
 import SearchResultContainer from './containers/SearchResultContainer';
-import DetailsPageContainer from "./containers/DetailsPageContainer"
+import DetailsPageContainer from "./containers/DetailsPageContainer";
 import DetailsPage from './components/DetailsPage';
 import './css/styles.css';
 import LoaderContainer from './containers/LoaderContainer';

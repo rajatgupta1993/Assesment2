@@ -6,15 +6,15 @@ import DetailsPage from '../components/DetailsPage';
 const mapStateToProps = (store) => {
     return {
         state: store.homeReducer.data,
-        detailData: store.homeReducer.detailData
-    }
-}
+        detailData: store.homeReducer.detailData,
+    };
+};
 
 const mapDispatchToProps = (dispatch) => {
     return {
         getDetails: (data) => dispatch(getDetails(data)),
-        postDataToServerAction: (data) => dispatch(postDataToServerAction(data))
-    }
+        postDataToServerAction: (data) => dispatch(postDataToServerAction(data)),
+    };
 };
 
 const DetailsPageContainer = connect(mapStateToProps, mapDispatchToProps)(DetailsPage);

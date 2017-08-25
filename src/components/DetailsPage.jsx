@@ -1,17 +1,17 @@
 import React from 'react';
-import Tile from './tiles';
-import { Link, } from 'react-router-dom';
+import Tile from "./tiles";
+import { Link } from 'react-router-dom';
 import KeyValuePairComponent from './KeyValuePairComponent';
 import Modal from './Modal';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
 export default class DetailsPage extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             data: '',
-            isModalOpen: false
+            isModalOpen: false,
         };
 
         this.openModal = this.openModal.bind(this);
@@ -21,7 +21,7 @@ export default class DetailsPage extends React.Component {
         this.onTitleChange = this.onTitleChange.bind(this);
         this.onAgeChange = this.onAgeChange.bind(this);
         this.onSaveClicked = this.onSaveClicked.bind(this);
-        this.postDataToServer = this.postDataToServer.bind(this);
+     
 
     }
 
@@ -36,7 +36,7 @@ export default class DetailsPage extends React.Component {
                 title: nextProps.detailData.title,
                 description: nextProps.detailData.details.description,
                 director: nextProps.detailData.details.director,
-                age: nextProps.detailData.details.age
+                age: nextProps.detailData.details.age,
             });
         }
     }
@@ -54,8 +54,8 @@ export default class DetailsPage extends React.Component {
             details: {
                 description: this.state.description,
                 age: this.state.age,
-                director: this.state.director
-            }
+                director: this.state.director,
+            },
         };
 
         let reqObj = {
@@ -77,25 +77,25 @@ export default class DetailsPage extends React.Component {
 
     onNameChange(e) {
         this.setState({
-            description: e.target.value
+            description: e.target.value,
         });
     }
 
     onCompanyChange(e) {
         this.setState({
-            director: e.target.value
+            director: e.target.value,
         });
     }
 
     onAgeChange(e) {
         this.setState({
-            age: e.target.value
+            age: e.target.value,
         });
     }
 
     onTitleChange(e) {
         this.setState({
-            title: e.target.value
+            title: e.target.value,
         });
     }
     render() {
@@ -130,5 +130,7 @@ export default class DetailsPage extends React.Component {
 
 
 DetailsPage.propTypes = {
-    postDataToServerAction: PropTypes.func
+    postDataToServerAction: PropTypes.func,
+    getDetails : PropTypes.func,
+    detailData :PropTypes.object,
 };

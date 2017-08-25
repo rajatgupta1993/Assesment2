@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const KeyValuePairComponent = ({key1,editable,onChange,value}=props) => {
+const KeyValuePairComponent = ({key1, editable, onChange, value}) => {
 
     return (
         <div className="marginBottom">
@@ -18,7 +18,7 @@ const KeyValuePairComponent = ({key1,editable,onChange,value}=props) => {
 KeyValuePairComponent.propTypes = {
     key1: PropTypes.string,
     onChange: PropTypes.func,
-    editable: PropTypes.bool
+    editable: PropTypes.bool,
 };
 
 

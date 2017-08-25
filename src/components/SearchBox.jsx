@@ -1,9 +1,8 @@
 import React from 'react';
-import reactLogo from '../resources/reactLogo.png';
-import { Link, } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const SearchBox= ({searchText,onValueChange,onCrossClicked }) => {
+const SearchBox= ({searchText, onValueChange, onCrossClicked }) => {
     return (
        <div className="container marginTop marginBottom">
                         <div className="row">
@@ -32,7 +31,7 @@ const SearchBox= ({searchText,onValueChange,onCrossClicked }) => {
 SearchBox.propTypes = {
     searchText: PropTypes.string,
     onValueChange: PropTypes.func,
-    onCrossClicked: PropTypes.func
+    onCrossClicked: PropTypes.func,
 };
 
 export default SearchBox;
